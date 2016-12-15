@@ -29,12 +29,12 @@
 </head>
 <body>
     <div class="activity-logs">
-        <header style="background: #131388">
+        <header style="background: #D91E18">
             <div class="site-nav">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-2">
-                            <a href="#"><img class="center-block" src="{% static 'img/zeebuks.png' %}" alt=""></a>
+                            <a href="#"><img class="center-block" src="{% static 'img/ZLOGO.png' %}" alt=""></a>
 
                             <button class="btn btn-info-outline" id="mobile-dropdown"><span class="glyphicon glyphicon-align-justify" style="font-size: 28px"></span></button>
                         </div>
@@ -86,7 +86,7 @@
                 {% if user.is_staff %}
                     <div class="col-md-6 col-sm-12">
                         <hr>            
-                        <h5 class="text-uppercase">Book Requests</h5>
+                        <h5 class="text-uppercase text-bold">Book Requests</h5>
                         <div class="col-md-12 padding-0 margin-bottom-30">
                             <form action="#" method="POST"> {% csrf_token %}
                                 <input name="search" type="text" class="form-control" placeholder="Search...">
@@ -123,7 +123,7 @@
 
                     <div class="col-md-6 col-sm-12">
                         <hr>
-                        <h5 class="text-uppercase">Book Returns</h5>
+                        <h5 class="text-uppercase text-bold">Book Returns</h5>
                         <div class="col-md-12 padding-0 margin-bottom-30">
                             <form action="#" method="POST"> {% csrf_token %}
                                 <input name="search" type="text" class="form-control" placeholder="Search...">

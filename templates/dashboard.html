@@ -35,7 +35,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-2">
-                            <a href="#"><img class="center-block" src="{% static 'img/zeebuks.png' %}" alt=""></a>
+                            <a href="#"><img class="center-block" src="{% static 'img/ZLOGO.png' %}" alt=""></a>
 
                             <button class="btn btn-info-outline" id="mobile-dropdown"><span class="glyphicon glyphicon-align-justify" style="font-size: 28px"></span></button>
                         </div>
@@ -140,6 +140,13 @@
                     </div>
                 </div>
                 {% endfor %}
+
+                <ul class="pager">
+                    <li class="text-uppercase">
+                        <a href="" class="font-size-60"><span class="glyphicon glyphicon-refresh" style="font-size: 13px"></span> Load More</a>
+                    </li>
+                </ul>
+
             </div>
         </section>
     </div>
@@ -158,8 +165,13 @@
                     <p class="text-gray font-size-14">Date Published</p>
 
                     <br>
+                    
+                    {% if book.stat %}
+                        <button type="button" class="btn btn-primary btn text-uppercase">Borrow</button>
+                    {% else %}
+                        <button type="button" class="btn btn-primary btn text-uppercase" disabled="disabled">Borrow</button>
+                    {% endif %}
 
-                    <button type="button" class="btn btn-primary btn text-uppercase">Borrow</button>
                     {% if user.is_staff %}
                         <button type="button" class="btn btn-success btn"><span class="glyphicon glyphicon-edit"></span></button>
                         <button type="button" class="btn btn-danger btn"><span class="glyphicon glyphicon-trash"></span></button>
